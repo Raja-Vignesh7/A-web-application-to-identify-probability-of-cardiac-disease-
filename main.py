@@ -39,6 +39,6 @@ class Model:
         
         result = model.predict_proba([res])
         # print(result[0,:])
-        return result[0,1]
+        return round(result[0,1],3)
 
-print(Model.predict([59,151,67,120,80,1,1]))
+# print(Model.predict([59,151,67,120,80,1,1]))

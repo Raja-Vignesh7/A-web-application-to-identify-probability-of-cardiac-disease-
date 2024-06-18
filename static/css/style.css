@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(135, 193, 238);
+    color: rgb(27, 22, 24);
+}
+.output{
+    display: flex;
+    flex-direction: column;
+}
+.titleContainer{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    margin-left: -5%;
+    /* line-height: 20px; */
+}
+.headder{
+    margin-left: 20%;
+}
