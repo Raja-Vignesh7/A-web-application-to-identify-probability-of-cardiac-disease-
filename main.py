@@ -1,5 +1,6 @@
 import joblib
-
+import matplotlib.pyplot as plt
+import io
 class Model:
     # get cholesterol
     def cholesterolLevel(value):
@@ -41,4 +42,25 @@ class Model:
         # print(result[0,:])
         return round(result[0,1],3)
 
+class Result:
+    def get_image(value):
+        color=""
+        if value<0.34:
+            color="green"
+        elif value<0.68 and value>=0.34:
+            color="orange"
+        elif value<1 and value>=0.68:
+            color="red"
+        fig, ax = plt.subplots()
+        ax.barh(['severity'], [value], color=color)
+        ax.set_xlim(0, 1)  # Set x-axis range from 0 to 1
+        ax.set_xlabel('Range 0 to 1')
+        ax.set_title('Single Bar Graph with Range 0 to 1')
+        
+        buf = io.BytesIO()
+        plt.savefig(buf, format='png')
+        buf.seek(0)
+        plt.close(fig)
+
+        return buf
 # print(Model.predict([59,151,67,120,80,1,1]))
