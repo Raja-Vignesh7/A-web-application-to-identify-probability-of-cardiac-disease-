@@ -25,7 +25,17 @@ async function postInput() {
         }
 
         const data = await response.json();
-        document.getElementById("Output").innerText = 'Success: ' + data.predicate;
+        const imgSrc = `data:image/png;base64,${data.image}`;   
+        document.getElementById("Output").innerText = 'Severity: ' + data.predicate;
+        // document.getElementById("Image").scr = imgsrc;
+        img = document.createElement('img');
+        img.src = imgSrc;
+        img.alt = 'ResultImage';
+        img.width = 650;
+        img.height = 250;
+        var container = document.getElementById("Image");
+        container.innerHTML = '';
+        container.append(img);
     } catch (error) {
         console.error('Error:', error);
         document.getElementById("Output").innerText = 'Error: ' + error.message;
@@ -41,14 +51,5 @@ function submitForm() {
     ap_hi = parseInt(document.getElementById("ap_hi").value);
     ap_lo = parseInt(document.getElementById("ap_lo").value);
     cholesterol = parseInt(document.getElementById("cholesterol").value);
-
-    document.getElementById("nameOutput").innerText = "Name: " + name;
-    document.getElementById("ageOutput").innerText = "Age: " + age;
-    document.getElementById("heightOutput").innerText = "Height: " + height;
-    document.getElementById("weightOutput").innerText = "Weight: " + weight;
-    document.getElementById("glucoseOutput").innerText = "Glucose: " + glucose;
-    document.getElementById("bloodPressureOutput").innerText = "Blood Pressure: " + ap_hi + "/" + ap_lo;
-    document.getElementById("cholesterolOutput").innerText = "Cholesterol: " + cholesterol;
-
     postInput();
 }

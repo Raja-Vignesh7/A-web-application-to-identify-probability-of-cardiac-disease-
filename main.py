@@ -45,17 +45,21 @@ class Model:
 class Result:
     def get_image(value):
         color=""
+        title = ""
         if value<0.34:
             color="green"
+            title = "perfect, no danger"
         elif value<0.68 and value>=0.34:
             color="orange"
+            title = "suggested to take precaution"
         elif value<1 and value>=0.68:
             color="red"
+            title = "Better consult a doctor"
         fig, ax = plt.subplots()
-        ax.barh(['severity'], [value], color=color)
+        ax.barh(['prediction'], [value], color=color)
         ax.set_xlim(0, 1)  # Set x-axis range from 0 to 1
-        ax.set_xlabel('Range 0 to 1')
-        ax.set_title('Single Bar Graph with Range 0 to 1')
+        ax.set_xlabel('severity')
+        ax.set_title(title)
         
         buf = io.BytesIO()
         plt.savefig(buf, format='png')

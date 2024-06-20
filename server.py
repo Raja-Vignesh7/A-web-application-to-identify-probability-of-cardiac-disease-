@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from main import Model , Result
-
+import base64
 app = Flask(__name__, template_folder='pages', static_folder='static')
 
 @app.route('/')
@@ -20,8 +20,8 @@ def predict_probability():
 
         predicate = Model.predict(array)
         image = Result.get_image(predicate)
-        
-        return jsonify({'predicate': predicate})
+        img_str = base64.b64encode(image.getvalue()).decode('utf-8')
+        return jsonify({'predicate': predicate , 'image': img_str})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 

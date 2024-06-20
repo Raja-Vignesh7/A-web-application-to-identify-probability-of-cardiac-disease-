@@ -1,5 +1,8 @@
 body{
     background-color:rgb(227, 199, 162);
+    background-image: url(/static/css/Background_3.jpg );
+    background-size: cover;
+    background-repeat: no-repeat;
     color: rgb(26, 26, 26);
     padding: 10px;
 }
@@ -18,20 +21,23 @@ body{
     /* line-height: 20px; */
     padding: 10px;
 }
+.Headder{
+    margin-left: 30%;
+}
 .inputContainer{
     background-color: rgba(113, 216, 242, 0.579);
     padding: 10px;
     box-shadow:10px 10px 5px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    margin-left: 30%;
+    margin-left: 20%;
     margin-top: 4%;
-    margin-right: 30%;
+    margin-right: 20%;
     
 }
 .Inputs{
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     color: rgb(25, 25, 25);
     text-align: left;
     margin-left: 10%;
@@ -78,10 +84,11 @@ body{
     border-radius: 3px;
     border-width: 1px;
     border-color: rgb(27, 27, 27);
-    font-size: 20px;
-    margin-left: 20%;
+    font-size: 27px;
+    margin-left: 40%;
     background-color: rgb(53, 53, 53);
     color: rgb(231, 244, 255);
+    
 }
 .headder{
     /* margin-left: 20%; */
@@ -95,8 +102,10 @@ body{
     background-color: rgba(234, 245, 255, 0.579);
     padding: 10px;
     box-shadow:10px 10px 5px rgba(0, 0, 0, 0.5);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
     border-radius: 5px;
     margin-left: 3%;
     margin-top: 4%;
-    margin-right: 80%;  
+    margin-right: 50%;  
 }
