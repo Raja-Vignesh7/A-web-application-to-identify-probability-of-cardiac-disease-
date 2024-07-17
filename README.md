@@ -37,7 +37,7 @@ Follow these steps to set up the project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/cardiovascular-disease-prediction.git
+git clone https://github.com/Raja-Vignesh7/A-web-application-to-identify-probability-of-cardiac-disease-.git
 
 # Navigate to the project directory
 cd cardiovascular-disease-prediction
@@ -66,5 +66,5 @@ python server.py
 Open your web browser and go to http://127.0.0.1:3000.
 
 
-## Ccontributing
+## contributing
 Contributions are welcome! If you have any suggestions, improvements, or bug fixes, please submit a pull request or open an issue.
