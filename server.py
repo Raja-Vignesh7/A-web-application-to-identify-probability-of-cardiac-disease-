@@ -14,7 +14,7 @@ def predict_probability():
         if not data:
             return jsonify({'error': 'No input data provided'}), 400
 
-        array = data.get('array')
+        array = data.get('array')           
         if not array:
             return jsonify({'error': 'Array not provided'}), 400
 
@@ -26,4 +26,4 @@ def predict_probability():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(port=3000,debug=True)
+    app.run(port=3000 , debug=True)
