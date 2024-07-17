@@ -68,3 +68,4 @@ Open your web browser and go to http://127.0.0.1:3000.
 
 ## contributing
 Contributions are welcome! If you have any suggestions, improvements, or bug fixes, please submit a pull request or open an issue.
+
