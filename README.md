@@ -40,7 +40,7 @@ Follow these steps to set up the project locally:
 git clone https://github.com/Raja-Vignesh7/A-web-application-to-identify-probability-of-cardiac-disease-.git
 
 # Navigate to the project directory
-cd cardiovascular-disease-prediction
+cd A-web-application-to-identify-probability-of-cardiac-disease-
 
 # Install the required dependencies
 pip install -r requirements.txt
