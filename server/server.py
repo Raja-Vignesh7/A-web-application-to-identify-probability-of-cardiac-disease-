@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, jsonify
 from main import Model , Result
+import os
 import base64
-app = Flask(__name__, template_folder='pages', static_folder='static')
-
+app = Flask(__name__,
+            template_folder=os.path.join('..', 'client', 'pages'),
+            static_folder=os.path.join('..', 'client', 'static'))
 @app.route('/')
 def home():
     return render_template('index.html')
